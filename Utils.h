@@ -3,13 +3,14 @@
 #include <time.h>
 #include <stdio.h>
 
-
+// ----- DLL export -----
+#ifndef EXPORT_FUNCTION
+	#define EXPORT_FUNCTION __declspec(dllexport)
+#endif
 
 // ----- Type size -----
 #define sizeof_array(array) \
     ((int)(sizeof(array) / sizeof(*(array))))
-
-
 
 // ----- Boolean -----
 #ifndef BOOL

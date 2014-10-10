@@ -1,4 +1,5 @@
 #include "Utils.h"
+#include <stdint.h>
 
 void *
 malloc_zero (size_t size)
@@ -21,3 +22,4 @@ str_is_in_array (char *str, char **array, int arraySize)
 
 	return false;
 }
+
