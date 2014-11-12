@@ -12,6 +12,9 @@
 #define sizeof_array(array) \
     ((int)(sizeof(array) / sizeof(*(array))))
 
+#define sizeof_struct_member(struct, member) \
+   (sizeof(((struct *)0)->member))
+
 // ----- Boolean -----
 #ifndef BOOL
 #ifdef WIN32
