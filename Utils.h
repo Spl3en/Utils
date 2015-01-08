@@ -15,6 +15,15 @@
 #define sizeof_struct_member(struct, member) \
    (sizeof(((struct *)0)->member))
 
+
+// ----- Enumeration string association -----
+typedef struct EnumerationStringAssociation {
+	int enumeration;
+	char *string;
+} EnumerationStringAssociation;
+#define associate(x) [x] = {x, STRINGIFY(x)}
+
+
 // ----- Boolean -----
 #ifndef BOOL
 #ifdef WIN32
@@ -44,6 +53,13 @@
 #define false FALSE
 #endif
 
+#define __out__
+#define __in__
+#define __opt__
+#define __inout__
+
+// Stringify
+#define STRINGIFY(x) # x
 
 bool
 is_in_array (int value, int *array, int size);
