@@ -61,17 +61,33 @@ typedef struct EnumerationStringAssociation {
 // Stringify
 #define STRINGIFY(x) # x
 
-bool
-is_in_array (int value, int *array, int size);
-
 int
 str_is_in_array (char *value, char **array, int size);
 
-void *
-malloc_zero (size_t size);
-
+/*
+ * Description : Return a time_t structure containing the current date detected
+ * Return : The current date
+ */
 time_t
-get_now (void);
+get_now (
+	void
+);
 
+/*
+ * Description : Writes in a buffer the current date detected
+ * Return : A string containing the current date
+ */
 char *
-get_now_str (void);
+get_now_str (
+	void
+);
+
+
+/*
+ * Description : Writes in a buffer the current date detected
+ * char *buffer : A buffer *WITH A LEAST 20 BYTES ALLOCATED*
+ */
+void
+get_now_buffer (
+	__out__ char *buffer
+);
