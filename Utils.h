@@ -91,3 +91,14 @@ void
 get_now_buffer (
 	__out__ char *buffer
 );
+
+
+/*
+ * Description : Check if the position is inside of the boundaries
+ * Return : True on success, false on failure
+ */
+bool
+in_bound (
+	int x, int y,
+	int x1, int y1, int x2, int y2
+);

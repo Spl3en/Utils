@@ -52,3 +52,18 @@ get_now (
 ) {
 	return time (NULL);
 }
+
+/*
+ * Description : Check if the position is inside of the boundaries
+ * Return : True on success, false on failure
+ */
+bool
+in_bound (
+	int x, int y,
+	int x1, int y1, int x2, int y2
+) {
+	return (
+		x >= x1 && x <= x2
+	&&  y >= y1 && y <= y2
+	);
+}
